@@ -27,8 +27,67 @@
 </div>
 
 <script>
+const works = [
+  {
+    id: "001",
+    title: "無名のキメラ",
+    tags: ["鷹", "ライオン"],
+    link: "post-001.html"
+  },
+  {
+    id: "002",
+    title: "名のない混合物",
+    tags: ["虎", "人間","狸"],
+    link: "post-002.html"
+  },
+  {
+    id: "003",
+    title: "記録されていない存在",
+    tags: ["鷲","魚"],
+    link: "post-003.html"
+  },
+  {
+    id: "004",
+    title: "通り過ぎるキメラ",
+    tags: ["馬", "豹"],
+    link: "post-004.html"
+  }
+];
   const params = new URLSearchParams(window.location.search);
   const tags = params.get('tags');
+  const selectedTags = tags ? tags.split(',') : [];
+
+  let filteredWorks = works;
+
+if (selectedTags.length > 0) {
+  filteredWorks = works.filter(work =>
+    selectedTags.every(tag => work.tags.includes(tag))
+  );
+}
+
+for (let i = filteredWorks.length - 1; i > 0; i--) {
+  const j = Math.floor(Math.random() * (i + 1));
+  [filteredWorks[i], filteredWorks[j]] = [filteredWorks[j], filteredWorks[i]];
+}
+
+const gallery = document.getElementById('gallery');
+
+if (filteredWorks.length === 0) {
+  gallery.innerHTML = "<p>該当する作品はありません。</p>";
+}
+
+filteredWorks.forEach(work => {
+  const a = document.createElement('a');
+  a.href = work.link;
+  a.className = "card";
+
+  a.innerHTML = `
+    <div class="thumb"><span>一枚絵</span></div>
+    <p class="caption">${work.title}</p>
+  `;
+
+  gallery.appendChild(a);
+});
 
   const resultArea = document.getElementById('resultTags');
 
