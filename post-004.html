@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>通り過ぎるキメラ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a href="index.html">← 戻る</a>
+
+<h1>通り過ぎるキメラ</h1>
+
+<div class="tags">
+  <span class="tag">鷹</span>
+  <span class="tag">ライオン</span>
+</div>
+
+<div class="image-box">
+  <div class="image blurred">
+    <p>ここに一枚絵が表示されます</p>
+  </div>
+
+  <div class="overlay">
+    <p>成人向け作品を表示しますか？</p>
+    <span class="confirm">表示する</span>
+  </div>
+</div>
+
+<div class="description">
+  <p>
+    記録されなかった存在。<br>
+    通り過ぎるためだけに在った。
+  </p>
+</div>
+
+<script>
+  const button = document.querySelector('.confirm');
+  const image = document.querySelector('.image');
+  const overlay = document.querySelector('.overlay');
+
+  button.addEventListener('click', () => {
+    image.classList.remove('blurred');
+    overlay.style.display = 'none';
+  });
+</script>
+
+</body>
+</html>
