@@ -1,0 +1,40 @@
+body {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  font-family: sans-serif;
+  padding: 40px;
+}
+
+a {
+  color: #a0c0a0;
+  text-decoration: none;
+}
+
+.gallery {
+  margin-top: 40px;
+}
+
+.card {
+  display: inline-block;
+  width: 200px;
+  border: 1px solid #444;
+  padding: 10px;
+}
+
+.thumb {
+  height: 120px;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.image-box {
+  height: 300px;
+  border: 1px solid #444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}

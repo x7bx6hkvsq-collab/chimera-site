@@ -3,82 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <title>キメラ投稿サイト</title>
-
-  <style>
-    body {
-      margin: 0;
-      padding: 40px;
-      background-color: #1f2a24;
-      color: #e6e6e6;
-      font-family: sans-serif;
-    }
-
-    h1 {
-      font-size: 20px;
-      font-weight: normal;
-      margin-bottom: 40px;
-    }
-
-    .post-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 24px;
-    }
-
-    .post {
-      background-color: #27352e;
-      padding: 12px;
-    }
-
-    .post img {
-      width: 100%;
-      height: auto;
-      display: block;
-      background-color: #111;
-    }
-
-    .post-title {
-      margin-top: 8px;
-      font-size: 14px;
-      opacity: 0.9;
-    }
-
-    .post-tags {
-      margin-top: 4px;
-      font-size: 12px;
-      opacity: 0.6;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <h1>キメラ投稿サイト</h1>
+<h1>キメラ投稿サイト</h1>
+<p>ここは表示確認用のページです。</p>
 
-  <div class="post-list">
-
-    <!-- ダミー投稿 1 -->
-    <div class="post">
-      <img src="https://via.placeholder.com/400x400?text=chimera">
-      <div class="post-title">無名</div>
-      <div class="post-tags">鷹 / ライオン</div>
+<div class="gallery">
+  <a href="post.html" class="card">
+    <div class="thumb">
+      <span>一枚絵</span>
     </div>
-
-    <!-- ダミー投稿 2 -->
-    <div class="post">
-      <img src="https://via.placeholder.com/400x400?text=chimera">
-      <div class="post-title">無名</div>
-      <div class="post-tags">人間 / 魚</div>
-    </div>
-
-    <!-- ダミー投稿 3 -->
-    <div class="post">
-      <img src="https://via.placeholder.com/400x400?text=chimera">
-      <div class="post-title">無名</div>
-      <div class="post-tags">鹿 / 鳥</div>
-    </div>
-
-  </div>
+    <p class="caption">無名のキメラ</p>
+  </a>
+</div>
 
 </body>
 </html>
