@@ -54,3 +54,8 @@ a {
   border: 1px solid #555;
   color: #ccc;
 }
+
+.blurred {
+  filter: blur(12px);
+  background-color: #222;
+}
