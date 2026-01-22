@@ -34,5 +34,16 @@
   </p>
 </div>
 
+<script>
+  const button = document.querySelector('.confirm');
+  const image = document.querySelector('.image');
+  const overlay = document.querySelector('.overlay');
+
+  button.addEventListener('click', () => {
+    image.classList.remove('blurred');
+    overlay.style.display = 'none';
+  });
+</script>
+
 </body>
 </html>
