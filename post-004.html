@@ -1,7 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>通り過ぎるキメラ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a href="index.html">← 戻る</a>
+
 <h1>通り過ぎるキメラ</h1>
 
-<div class="image">
-  <span>一枚絵</span>
+<div class="tags">
+  <span class="tag">馬</span>
+  <span class="tag">豹</span>
 </div>
 
-<p>このキメラは通り過ぎる為に在った。</p>
+<div class="image-box">
+  <div class="image blurred">
+    <p>ここに一枚絵が表示されます</p>
+  </div>
+
+  <div class="overlay">
+    <p>成人向け作品を表示させますか？</p>
+    <span class="confirm">表示する</span>
+  </div>
+</div>
+
+<div class="description">
+  <p>
+   このキメラは通り過ぎる為に在った。
+  </p>
+</div>
+
+<script>
+  const button = document.querySelector('.confirm');
+  const image = document.querySelector('.image');
+  const overlay = document.querySelector('.overlay');
+
+  button.addEventListener('click', () => {
+    image.classList.remove('blurred');
+    overlay.style.display = 'none';
+  });
+</script>
+
+</body>
+</html>

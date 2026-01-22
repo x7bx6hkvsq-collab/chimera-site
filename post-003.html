@@ -1,8 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>記録されていない存在</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a href="index.html">← 戻る</a>
+
 <h1>記録されていない存在</h1>
 
-<div class="image">
-  <span>一枚絵</span>
+<div class="tags">
+  <span class="tag">鷲</span>
+  <span class="tag">魚</span>
 </div>
 
-<p>記録されなかった存在。<br>
-名前も残らなかった。</p>
+<div class="image-box">
+  <div class="image blurred">
+    <p>ここに一枚絵が表示されます</p>
+  </div>
+
+  <div class="overlay">
+    <p>成人向け作品を表示させますか？</p>
+    <span class="confirm">表示する</span>
+  </div>
+</div>
+
+<div class="description">
+  <p>
+   記録されなかった存在。<br>
+名前も残らなかった。
+  </p>
+</div>
+
+<script>
+  const button = document.querySelector('.confirm');
+  const image = document.querySelector('.image');
+  const overlay = document.querySelector('.overlay');
+
+  button.addEventListener('click', () => {
+    image.classList.remove('blurred');
+    overlay.style.display = 'none';
+  });
+</script>
+
+</body>
+</html>
