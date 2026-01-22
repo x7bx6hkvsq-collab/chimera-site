@@ -55,5 +55,37 @@
   </a>
 </div>
 
+<script>
+  const tagButtons = document.querySelectorAll('.tag-btn');
+  const selectedText = document.querySelector('.search-selected');
+
+  let selectedTags = [];
+
+  tagButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const tag = btn.textContent;
+
+      if (selectedTags.includes(tag)) {
+        // すでに選ばれていたら外す
+        selectedTags = selectedTags.filter(t => t !== tag);
+        btn.classList.remove('active');
+      } else {
+        // 新しく選ぶ（上限4つ）
+        if (selectedTags.length < 4) {
+          selectedTags.push(tag);
+          btn.classList.add('active');
+        }
+      }
+
+      // 表示更新
+      if (selectedTags.length === 0) {
+        selectedText.textContent = '選択中：なし';
+      } else {
+        selectedText.textContent = '選択中：' + selectedTags.join('・');
+      }
+    });
+  });
+</script>
+
 </body>
 </html>
