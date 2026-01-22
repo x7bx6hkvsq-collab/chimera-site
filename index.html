@@ -89,9 +89,7 @@
       }
     });
   });
-</script>
-
-const goSearchBtn = document.getElementById('goSearch');
+  const goSearchBtn = document.getElementById('goSearch');
 
 goSearchBtn.addEventListener('click', () => {
   if (selectedTags.length === 0) return;
@@ -99,6 +97,7 @@ goSearchBtn.addEventListener('click', () => {
   const query = selectedTags.join(',');
   window.location.href = `search.html?tags=${encodeURIComponent(query)}`;
 });
+</script>
 
 </body>
 </html>
