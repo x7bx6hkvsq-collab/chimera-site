@@ -123,3 +123,33 @@ a {
   border: 1px solid #666;
   font-size: 14px;
 }
+
+.search-area {
+  margin: 2rem 0;
+}
+
+.search-note {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  margin-bottom: 0.5rem;
+}
+
+.tag-search {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag-btn {
+  padding: 0.3rem 0.8rem;
+  border: 1px solid #ccc;
+  background: transparent;
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+
+.search-selected {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
