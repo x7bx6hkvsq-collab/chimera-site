@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>検索結果</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>検索</h1>
+
+<p class="search-result-note">
+  選択された生物タグ：
+</p>
+
+<p class="search-result-tags" id="resultTags">
+  なし
+</p>
+
+<p class="search-result-sub">
+  条件に一致する作品が表示されます。
+</p>
+
+<!-- 仮：全作品表示（後で絞る） -->
+<div class="gallery">
+  <p style="opacity:0.6;">（現在は全ての作品が表示されます）</p>
+</div>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const tags = params.get('tags');
+
+  const resultArea = document.getElementById('resultTags');
+
+  if (tags) {
+    resultArea.textContent = tags.split(',').join('・');
+  }
+</script>
+
+</body>
+</html>

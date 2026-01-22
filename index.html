@@ -17,6 +17,10 @@
   選択中：なし
 </p>
 
+<button id="goSearch" class="search-go">
+  この条件で探す
+</button>
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -86,6 +90,15 @@
     });
   });
 </script>
+
+const goSearchBtn = document.getElementById('goSearch');
+
+goSearchBtn.addEventListener('click', () => {
+  if (selectedTags.length === 0) return;
+
+  const query = selectedTags.join(',');
+  window.location.href = `search.html?tags=${encodeURIComponent(query)}`;
+});
 
 </body>
 </html>
