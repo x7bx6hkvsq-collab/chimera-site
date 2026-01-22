@@ -12,6 +12,9 @@ a {
 
 .gallery {
   margin-top: 40px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .card {
